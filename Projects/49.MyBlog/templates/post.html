@@ -1,10 +1,11 @@
 {% include "header.html" %}
 <!-- Page Header -->
+
 <header
-  class="masthead"
-  style="
+class="masthead"
+style="
     background-image: url('https://images.unsplash.com/photo-1470092306007-055b6797ca72?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
-  "
+    "
 >
   <div class="overlay"></div>
   <div class="container">
@@ -19,10 +20,10 @@
   </div>
 </header>
 <body>
-  <div class="card">
+  <div class="card-post", style="background-color: aliceblue; padding: 10%; text-align: center;">
     <h1>{{ post.title }}</h1>
     <h2>{{ post.subtitle }}</h2>
-    <p>{{ post.body }}</p>
+    <p style="background-color: rgb(240, 255, 250);">{{ post.body }}</p>
   </div>
 </body>
 

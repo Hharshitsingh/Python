@@ -46,3 +46,5 @@
 **46.Guess The Number Flask**<br>
 **47.My Card**<br>
 **48.Blog Site**<br>
+**49.My Blog**<br>
+**Flask Secret**<br>
