@@ -20,6 +20,10 @@ class Todo(db.Model):
 # home
 @app.route('/', methods = ['GET', 'POST'])
 def start():
+    ip_address = request.remote_addr
+    with open('./ip.txt', 'a') as f:
+        f.write(ip_address)
+        f.write('\n')
     if request.method == 'POST':
         title = request.form['title']
         desc = request.form['desc']
@@ -53,6 +57,12 @@ def delete(sno):
     db.session.delete(todo)
     db.session.commit()
     return redirect('/')
+
+@app.route("/ip")
+def index():
+    ip_address = request.remote_addr
+    print(ip_address)
+    return "Requester IP: " + ip_address
 
 if __name__ == '__main__':
     app.run(debug=True, port=8888)
