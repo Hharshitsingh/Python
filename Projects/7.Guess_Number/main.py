@@ -29,8 +29,9 @@ def check_answer(guess, answer, turns):
 def game():
     print(logo)
     answer = randint(1,100)
+    answer = 88
     print('''I select the number between 1 to 100! \n Now, It's your turn guess the number ''')
-    print(f"The correct answer is {answer}")
+    # print(f"The correct answer is {answer}")
     turns = set_difficulty()
     guess = 0
     while guess!= answer:

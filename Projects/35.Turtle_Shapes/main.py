@@ -1,6 +1,7 @@
 import turtle
 from turtle import Screen, Turtle
 from random import randint, random
+import time
 
 class Shapes (Turtle):
     def __init__(self):
@@ -19,17 +20,20 @@ class Shapes (Turtle):
         self.screen.exitonclick()
 
     def start_drawing(self):
-        for num_of_side in range(3, 21):
+        for num_of_side in range(20, 0, -1):
             self.draw_shape(num_of_side)
         self.hideturtle()
 
     def draw_shape(self, numofside):
         self.speed(5.5)
+        # self.color("black", "red")
         self.color(self.random_color())
+        self.begin_fill()
         for _ in range(numofside):
             angle = 360/numofside
             self.forward(100)
             self.right(angle)
+        self.end_fill()
 
     def random_color(self):
         r = randint(0, 255)

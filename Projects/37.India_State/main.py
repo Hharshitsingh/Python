@@ -35,10 +35,10 @@ class Game:
             if self.answer_state in self.all_state:
                 self.guessed_states.append(self.answer_state) 
                 t = Turtle()
-                # t.hideturtle()
+                t.hideturtle()
                 t.shape('circle')
                 t.shapesize(0.5)
-                # t.penup()
+                t.penup()
                 state_data = self.data[self.data.state == self.answer_state]
                 t.goto(int(state_data.cordX), int(state_data.cordY))
                 # t.write(self.answer_state)
